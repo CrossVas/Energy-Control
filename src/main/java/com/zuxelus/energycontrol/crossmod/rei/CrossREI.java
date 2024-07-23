@@ -100,8 +100,6 @@ public class CrossREI implements REIClientPlugin {
 
     public static class KitAssemblerCategory implements DisplayCategory<KitAssemblerDisplay> {
 
-        public static final ResourceLocation TEXTURE = new ResourceLocation(EnergyControl.MODID, "textures/gui/gui_kit_assembler.png");
-
         @Override
         public CategoryIdentifier<? extends KitAssemblerDisplay> getCategoryIdentifier() {
             return KIT_ASSEMBLER;
