@@ -116,12 +116,12 @@ public class CrossREI implements REIClientPlugin {
             List<ItemStack> inputB = convertIngredientToStacks(display.recipe().input2, display.recipe().count2);
             List<ItemStack> inputC = convertIngredientToStacks(display.recipe().input3, display.recipe().count3);
 
-            widgets.add(Widgets.createArrow(new Point(bounds.getMinX() + 7 + 5 + 18, bounds.getCenterY() - 9)).animationDurationMS(2000));
+            widgets.add(Widgets.createArrow(new Point(bounds.getMinX() + 30, bounds.getCenterY() - 9)).animationDurationMS(2000));
             widgets.add(Widgets.createSlot(new Point(bounds.getMinX() + 7, bounds.getMinY() + 7)).entries(EntryIngredients.ofItemStacks(inputA)).markInput());
             widgets.add(Widgets.createSlot(new Point(bounds.getMinX() + 7, bounds.getMinY() + 7 + 18)).entries(EntryIngredients.ofItemStacks(inputB)).markInput());
             widgets.add(Widgets.createSlot(new Point(bounds.getMinX() + 7, bounds.getMinY() + 7 + 36)).entries(EntryIngredients.ofItemStacks(inputC)).markInput());
-            widgets.add(Widgets.createResultSlotBackground(new Point(bounds.getMinX() + 7 + 8 + 18 + 5 + 22 + 5, bounds.getCenterY() - 8)));
-            widgets.add(Widgets.createSlot(new Point(bounds.getMinX() + 7 + 5 + 18 + 8 + 22 + 5, bounds.getCenterY() - 8)).entries(EntryIngredients.of(display.recipe().output)).markOutput().disableBackground());
+            widgets.add(Widgets.createResultSlotBackground(new Point(bounds.getMinX() + 60 + 5, bounds.getCenterY() - 8)));
+            widgets.add(Widgets.createSlot(new Point(bounds.getMinX() + 60 + 5, bounds.getCenterY() - 8)).entries(EntryIngredients.of(display.recipe().output)).markOutput().disableBackground());
             return widgets;
         }
 
