@@ -18,7 +18,6 @@ import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;
 import me.shedaniel.rei.api.client.registry.screen.ScreenRegistry;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
-import me.shedaniel.rei.api.common.entry.EntryIngredient;
 import me.shedaniel.rei.api.common.util.EntryIngredients;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import me.shedaniel.rei.forge.REIPluginClient;
@@ -164,11 +163,6 @@ public class CrossREI implements REIClientPlugin {
                     Collections.singletonList(EntryIngredients.of(recipe.output)));
             this.RECIPE = recipe;
         }
-
-        public KitAssemblerDisplay(List<EntryIngredient> inputs, List<EntryIngredient> outputs) {
-            super(inputs, outputs);
-        }
-
 
         public KitAssemblerRecipe recipe() {
             return this.RECIPE;
