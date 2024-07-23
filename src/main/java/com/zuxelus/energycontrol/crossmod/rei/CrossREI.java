@@ -159,7 +159,7 @@ public class CrossREI implements REIClientPlugin {
         KitAssemblerRecipe RECIPE;
 
         public KitAssemblerDisplay(KitAssemblerRecipe recipe) {
-            super(EntryIngredients.ofIngredients(List.of(recipe.input1, recipe.input2, recipe.input3)),
+            super(EntryIngredients.ofIngredients(recipe.getIngredients().stream().toList()),
                     Collections.singletonList(EntryIngredients.of(recipe.output)));
             this.RECIPE = recipe;
         }
